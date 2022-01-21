@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WishList.Data;
-
 
 namespace WishList
 {
@@ -20,7 +18,7 @@ namespace WishList
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddDbContext<ApplicationDBContext>(options => OptionsBuilderConfigurationExtensions.UseInMemoryDatabase("WishList"));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
